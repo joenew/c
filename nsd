@@ -1,0 +1,32 @@
+#include <stdio.h>
+void nsd(int r,int w);
+void nsd(int r,int w) {
+    
+    do {
+ if (r>w) r=r%w;
+ else w=w%r;
+    }
+     while (r!=0&&w!=0); 
+   
+     printf ("nsd: %d", w+r);
+   
+    
+}
+int main() 
+{
+	
+
+    int a,b,c;
+    printf ("Input a,b,c: \n");
+    scanf ("%d%d%d", &a,&b,&c);
+    
+    do {
+		if (a>b) a=a%b;
+        else b=b%a;
+    }
+    while (a!=0&&b!=0);
+   
+    nsd(c,a+b);
+   
+    return 0;
+}
